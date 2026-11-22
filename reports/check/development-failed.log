@@ -1,0 +1,124 @@
+
+STAGE: fresh project
+PROJECT: countercheck-txv4ozn3
+RESTORE_PROJECT: countercheck-txv4ozn3-restore
+ Image countercheck-txv4ozn3-app Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 662B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 236B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim
+#3 DONE 2.4s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 135B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 94B done
+#5 DONE 0.0s
+
+#6 [1/5] FROM docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+#6 resolve docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90 done
+#6 DONE 0.0s
+
+#7 [4/5] RUN pip install --no-cache-dir -r requirements.txt
+#7 CACHED
+
+#8 [2/5] WORKDIR /app
+#8 CACHED
+
+#9 [3/5] COPY app/requirements.txt .
+#9 CACHED
+
+#10 [5/5] COPY app/app.py .
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:2d7764dd40f3a3ebf28b17ae9b54ebf130e7ff0940dafbba35b9123c5bec9756 done
+#11 exporting config sha256:25563ad13f7bbc6665c3e7a2fbc8156309ed99984b641b3a98bdb88e8d861d11 done
+#11 exporting attestation manifest sha256:74cb2ef55900868ac0065ca56510ddf85b9749fdd3eb5254af019f90b1f649c9 done
+#11 exporting manifest list sha256:2f8751aca219dd43730b6ab9eb016f972e8d51c76751f2c4416a0993f0a28df8 done
+#11 naming to docker.io/library/countercheck-txv4ozn3-app:latest done
+#11 unpacking to docker.io/library/countercheck-txv4ozn3-app:latest done
+#11 DONE 0.0s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+ Image countercheck-txv4ozn3-app Built 
+ Network countercheck-txv4ozn3_default Creating 
+ Network countercheck-txv4ozn3_default Creating 
+ Volume countercheck-txv4ozn3_redis_data Creating 
+ Volume countercheck-txv4ozn3_redis_data Creating 
+ Volume countercheck-txv4ozn3_redis_data Created 
+ Volume countercheck-txv4ozn3_redis_data Created 
+ Network countercheck-txv4ozn3_default Created 
+ Network countercheck-txv4ozn3_default Created 
+ Container countercheck-txv4ozn3-redis-1 Creating 
+ Container countercheck-txv4ozn3-redis-1 Created 
+ Container countercheck-txv4ozn3-app-1 Creating 
+ Container countercheck-txv4ozn3-app-1 Created 
+ Container countercheck-txv4ozn3-redis-1 Starting 
+ Container countercheck-txv4ozn3-redis-1 Started 
+ Container countercheck-txv4ozn3-redis-1 Waiting 
+ Container countercheck-txv4ozn3-redis-1 Healthy 
+ Container countercheck-txv4ozn3-app-1 Starting 
+ Container countercheck-txv4ozn3-app-1 Started 
+ Container countercheck-txv4ozn3-app-1 Waiting 
+ Container countercheck-txv4ozn3-redis-1 Waiting 
+ Container countercheck-txv4ozn3-redis-1 Healthy 
+ Container countercheck-txv4ozn3-app-1 Healthy 
+URL: http://127.0.0.1:55000
+
+STAGE: process restrictions
+UID = 10001 ; readonly = True ; memory = 268435456 ; NanoCpus = 1000000000
+
+STAGE: initial count and increments
+GET / -> HTTP 200
+count = 0
+POST /increment -> HTTP 200
+count = 1
+POST /increment -> HTTP 200
+count = 2
+POST /increment -> HTTP 200
+count = 3
+
+STAGE: recreate app only
+ Container countercheck-txv4ozn3-app-1 Recreate 
+ Container countercheck-txv4ozn3-app-1 Recreated 
+ Container countercheck-txv4ozn3-app-1 Starting 
+ Container countercheck-txv4ozn3-app-1 Started 
+ Container countercheck-txv4ozn3-app-1 Waiting 
+ Container countercheck-txv4ozn3-app-1 Healthy 
+curl: (7) Failed to connect to 127.0.0.1 port 55000 after 0 ms: Couldn't connect to server
+ERROR [recreate app only]: check failed (exit 7)
+redis-1  | 1:C 22 Nov 2026 17:56:18.065 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 22 Nov 2026 17:56:18.065 * Redis version=7.4.12, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1  | 1:C 22 Nov 2026 17:56:18.065 * Configuration loaded
+redis-1  | 1:M 22 Nov 2026 17:56:18.066 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 22 Nov 2026 17:56:18.067 * Running mode=standalone, port=6379.
+redis-1  | 1:M 22 Nov 2026 17:56:18.067 * Server initialized
+redis-1  | 1:M 22 Nov 2026 17:56:18.068 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+redis-1  | 1:M 22 Nov 2026 17:56:18.069 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+redis-1  | 1:M 22 Nov 2026 17:56:18.069 * Ready to accept connections tcp
+app-1    | 2026-11-22 17:56:32,040 listening port=8000 storage=redis
+app-1    | 2026-11-22 17:56:36,984 http 127.0.0.1 "GET /readyz HTTP/1.1" 200 -
+ Container countercheck-txv4ozn3-app-1 Stopping 
+ Container countercheck-txv4ozn3-app-1 Stopped 
+ Container countercheck-txv4ozn3-app-1 Removing 
+ Container countercheck-txv4ozn3-app-1 Removed 
+ Container countercheck-txv4ozn3-redis-1 Stopping 
+ Container countercheck-txv4ozn3-redis-1 Stopped 
+ Container countercheck-txv4ozn3-redis-1 Removing 
+ Container countercheck-txv4ozn3-redis-1 Removed 
+ Volume countercheck-txv4ozn3_redis_data Removing 
+ Network countercheck-txv4ozn3_default Removing 
+ Volume countercheck-txv4ozn3_redis_data Removed 
+ Image countercheck-txv4ozn3-app:latest Removing 
+ Image countercheck-txv4ozn3-app:latest Removed 
+ Network countercheck-txv4ozn3_default Removed 

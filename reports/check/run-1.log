@@ -1,0 +1,272 @@
+
+STAGE: fresh project
+PROJECT: countercheck-kwsdzpbz
+RESTORE_PROJECT: countercheck-kwsdzpbz-restore
+ Image countercheck-kwsdzpbz-app Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 662B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 236B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim
+#3 DONE 0.8s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 135B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 94B done
+#5 DONE 0.0s
+
+#6 [1/5] FROM docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+#6 resolve docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90 done
+#6 DONE 0.0s
+
+#7 [2/5] WORKDIR /app
+#7 CACHED
+
+#8 [3/5] COPY app/requirements.txt .
+#8 CACHED
+
+#9 [4/5] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [5/5] COPY app/app.py .
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:9cdeef57135af60b2a3c91971b790b066c384d02b310a078ebba5685b9a79ecd done
+#11 exporting config sha256:a36705bad1c2a92be41008e0c20dd872f3b0e860fb389a81b980079cc51bdee7 done
+#11 exporting attestation manifest sha256:ec56a63b653cae2566e079ad7f86eea006ffa7f411aa3b40fa30f379ae4fb243 done
+#11 exporting manifest list sha256:4394311d57b74a8bcb4c72a87e4c0972d5607576579a2a214cb9c8f26be5466c done
+#11 naming to docker.io/library/countercheck-kwsdzpbz-app:latest done
+#11 unpacking to docker.io/library/countercheck-kwsdzpbz-app:latest done
+#11 DONE 0.0s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+ Image countercheck-kwsdzpbz-app Built 
+ Network countercheck-kwsdzpbz_default Creating 
+ Network countercheck-kwsdzpbz_default Creating 
+ Volume countercheck-kwsdzpbz_redis_data Creating 
+ Volume countercheck-kwsdzpbz_redis_data Creating 
+ Volume countercheck-kwsdzpbz_redis_data Created 
+ Volume countercheck-kwsdzpbz_redis_data Created 
+ Network countercheck-kwsdzpbz_default Created 
+ Network countercheck-kwsdzpbz_default Created 
+ Container countercheck-kwsdzpbz-redis-1 Creating 
+ Container countercheck-kwsdzpbz-redis-1 Created 
+ Container countercheck-kwsdzpbz-app-1 Creating 
+ Container countercheck-kwsdzpbz-app-1 Created 
+ Container countercheck-kwsdzpbz-redis-1 Starting 
+ Container countercheck-kwsdzpbz-redis-1 Started 
+ Container countercheck-kwsdzpbz-redis-1 Waiting 
+ Container countercheck-kwsdzpbz-redis-1 Healthy 
+ Container countercheck-kwsdzpbz-app-1 Starting 
+ Container countercheck-kwsdzpbz-app-1 Started 
+ Container countercheck-kwsdzpbz-app-1 Waiting 
+ Container countercheck-kwsdzpbz-redis-1 Waiting 
+ Container countercheck-kwsdzpbz-redis-1 Healthy 
+ Container countercheck-kwsdzpbz-app-1 Healthy 
+URL: http://127.0.0.1:55002
+
+STAGE: process restrictions
+UID = 10001 ; readonly = True ; memory = 268435456 ; NanoCpus = 1000000000
+
+STAGE: initial count and increments
+GET / -> HTTP 200
+count = 0
+POST /increment -> HTTP 200
+count = 1
+POST /increment -> HTTP 200
+count = 2
+POST /increment -> HTTP 200
+count = 3
+
+STAGE: recreate app only
+ Container countercheck-kwsdzpbz-app-1 Recreate 
+ Container countercheck-kwsdzpbz-app-1 Recreated 
+ Container countercheck-kwsdzpbz-app-1 Starting 
+ Container countercheck-kwsdzpbz-app-1 Started 
+ Container countercheck-kwsdzpbz-app-1 Waiting 
+ Container countercheck-kwsdzpbz-app-1 Healthy 
+URL: http://127.0.0.1:55003
+GET / -> HTTP 200
+count = 3
+
+STAGE: compose down and up without deleting data
+ Container countercheck-kwsdzpbz-app-1 Stopping 
+ Container countercheck-kwsdzpbz-app-1 Stopped 
+ Container countercheck-kwsdzpbz-app-1 Removing 
+ Container countercheck-kwsdzpbz-app-1 Removed 
+ Container countercheck-kwsdzpbz-redis-1 Stopping 
+ Container countercheck-kwsdzpbz-redis-1 Stopped 
+ Container countercheck-kwsdzpbz-redis-1 Removing 
+ Container countercheck-kwsdzpbz-redis-1 Removed 
+ Network countercheck-kwsdzpbz_default Removing 
+ Network countercheck-kwsdzpbz_default Removed 
+ Network countercheck-kwsdzpbz_default Creating 
+ Network countercheck-kwsdzpbz_default Creating 
+ Network countercheck-kwsdzpbz_default Created 
+ Network countercheck-kwsdzpbz_default Created 
+ Container countercheck-kwsdzpbz-redis-1 Creating 
+ Container countercheck-kwsdzpbz-redis-1 Created 
+ Container countercheck-kwsdzpbz-app-1 Creating 
+ Container countercheck-kwsdzpbz-app-1 Created 
+ Container countercheck-kwsdzpbz-redis-1 Starting 
+ Container countercheck-kwsdzpbz-redis-1 Started 
+ Container countercheck-kwsdzpbz-redis-1 Waiting 
+ Container countercheck-kwsdzpbz-redis-1 Healthy 
+ Container countercheck-kwsdzpbz-app-1 Starting 
+ Container countercheck-kwsdzpbz-app-1 Started 
+ Container countercheck-kwsdzpbz-redis-1 Waiting 
+ Container countercheck-kwsdzpbz-app-1 Waiting 
+ Container countercheck-kwsdzpbz-redis-1 Healthy 
+ Container countercheck-kwsdzpbz-app-1 Healthy 
+URL: http://127.0.0.1:55004
+GET / -> HTTP 200
+count = 3
+
+STAGE: Redis outage
+ Container countercheck-kwsdzpbz-redis-1 Stopping 
+ Container countercheck-kwsdzpbz-redis-1 Stopped 
+GET /healthz -> HTTP 200
+GET /readyz -> HTTP 503
+POST /increment -> HTTP 503
+
+STAGE: Redis recovery without app restart
+ Container countercheck-kwsdzpbz-redis-1 Starting 
+ Container countercheck-kwsdzpbz-redis-1 Started 
+ Container countercheck-kwsdzpbz-redis-1 Waiting 
+ Container countercheck-kwsdzpbz-redis-1 Healthy 
+Application ready
+GET / -> HTTP 200
+count = 3
+POST /increment -> HTTP 200
+count = 4
+App ID, StartedAt and RestartCount unchanged
+
+STAGE: consistent external backup
+ Container countercheck-kwsdzpbz-app-1 Stopping 
+ Container countercheck-kwsdzpbz-app-1 Stopped 
+ Container countercheck-kwsdzpbz-redis-1 Stopping 
+ Container countercheck-kwsdzpbz-redis-1 Stopped 
+BACKUP: /Users/artemstary-boh/.codex/.chatgpt-projects/g-p-6a91d89c90ac81918d4cd0d85a00bf5b/hw_3_solution/backups/countercheck-kwsdzpbz.tar
+
+STAGE: delete original project including volumes
+ Container countercheck-kwsdzpbz-app-1 Stopping 
+ Container countercheck-kwsdzpbz-app-1 Stopped 
+ Container countercheck-kwsdzpbz-app-1 Removing 
+ Container countercheck-kwsdzpbz-app-1 Removed 
+ Container countercheck-kwsdzpbz-redis-1 Stopping 
+ Container countercheck-kwsdzpbz-redis-1 Stopped 
+ Container countercheck-kwsdzpbz-redis-1 Removing 
+ Container countercheck-kwsdzpbz-redis-1 Removed 
+ Volume countercheck-kwsdzpbz_redis_data Removing 
+ Network countercheck-kwsdzpbz_default Removing 
+ Volume countercheck-kwsdzpbz_redis_data Removed 
+ Image countercheck-kwsdzpbz-app:latest Removing 
+ Image countercheck-kwsdzpbz-app:latest Removed 
+ Network countercheck-kwsdzpbz_default Removed 
+Original containers and volumes removed
+
+STAGE: restore backup into another empty project
+ Network countercheck-kwsdzpbz-restore_default Creating 
+ Network countercheck-kwsdzpbz-restore_default Creating 
+ Volume countercheck-kwsdzpbz-restore_redis_data Creating 
+ Volume countercheck-kwsdzpbz-restore_redis_data Creating 
+ Volume countercheck-kwsdzpbz-restore_redis_data Created 
+ Volume countercheck-kwsdzpbz-restore_redis_data Created 
+ Network countercheck-kwsdzpbz-restore_default Created 
+ Network countercheck-kwsdzpbz-restore_default Created 
+ Container countercheck-kwsdzpbz-restore-redis-1 Creating 
+ Container countercheck-kwsdzpbz-restore-redis-1 Created 
+ Image countercheck-kwsdzpbz-restore-app Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 678B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 236B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim
+#3 DONE 0.7s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 135B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 94B done
+#5 DONE 0.0s
+
+#6 [1/5] FROM docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+#6 resolve docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90 0.0s done
+#6 DONE 0.0s
+
+#7 [4/5] RUN pip install --no-cache-dir -r requirements.txt
+#7 CACHED
+
+#8 [3/5] COPY app/requirements.txt .
+#8 CACHED
+
+#9 [2/5] WORKDIR /app
+#9 CACHED
+
+#10 [5/5] COPY app/app.py .
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:743dd1e9d86a99e37e390c7be0bd22194ecac8d6e5fde231d00e4c653748e742 done
+#11 exporting config sha256:ebca6a51df97950705a7016166aec22fd3da314eaa8fe1c6287d9cf4dbd87c59 done
+#11 exporting attestation manifest sha256:3b5dbe30881aeaf964986d7a6560e59036842afec8757fb330e4e3055f743c9f done
+#11 exporting manifest list sha256:3fd0710ee3f8de4a08d251357d638ad8a708d1b6155c6b89001e44effc4beed6 done
+#11 naming to docker.io/library/countercheck-kwsdzpbz-restore-app:latest done
+#11 unpacking to docker.io/library/countercheck-kwsdzpbz-restore-app:latest done
+#11 DONE 0.0s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+ Image countercheck-kwsdzpbz-restore-app Built 
+ Container countercheck-kwsdzpbz-restore-app-1 Creating 
+ Container countercheck-kwsdzpbz-restore-app-1 Created 
+ Container countercheck-kwsdzpbz-restore-redis-1 Starting 
+ Container countercheck-kwsdzpbz-restore-redis-1 Started 
+ Container countercheck-kwsdzpbz-restore-redis-1 Waiting 
+ Container countercheck-kwsdzpbz-restore-redis-1 Healthy 
+ Container countercheck-kwsdzpbz-restore-app-1 Starting 
+ Container countercheck-kwsdzpbz-restore-app-1 Started 
+ Container countercheck-kwsdzpbz-restore-redis-1 Waiting 
+ Container countercheck-kwsdzpbz-restore-app-1 Waiting 
+ Container countercheck-kwsdzpbz-restore-redis-1 Healthy 
+ Container countercheck-kwsdzpbz-restore-app-1 Healthy 
+URL: http://127.0.0.1:55005
+GET / -> HTTP 200
+count = 4
+POST /increment -> HTTP 200
+count = 5
+Backup restored: count 4, next increment 5
+
+STAGE: cleanup
+ Container countercheck-kwsdzpbz-restore-app-1 Stopping 
+ Container countercheck-kwsdzpbz-restore-app-1 Stopped 
+ Container countercheck-kwsdzpbz-restore-app-1 Removing 
+ Container countercheck-kwsdzpbz-restore-app-1 Removed 
+ Container countercheck-kwsdzpbz-restore-redis-1 Stopping 
+ Container countercheck-kwsdzpbz-restore-redis-1 Stopped 
+ Container countercheck-kwsdzpbz-restore-redis-1 Removing 
+ Container countercheck-kwsdzpbz-restore-redis-1 Removed 
+ Volume countercheck-kwsdzpbz-restore_redis_data Removing 
+ Network countercheck-kwsdzpbz-restore_default Removing 
+ Volume countercheck-kwsdzpbz-restore_redis_data Removed 
+ Image countercheck-kwsdzpbz-restore-app:latest Removing 
+ Image countercheck-kwsdzpbz-restore-app:latest Removed 
+ Network countercheck-kwsdzpbz-restore_default Removed 
+SUCCESS: recovery verified; test resources removed

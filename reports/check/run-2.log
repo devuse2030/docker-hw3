@@ -1,0 +1,272 @@
+
+STAGE: fresh project
+PROJECT: countercheck-kqcdhbrp
+RESTORE_PROJECT: countercheck-kqcdhbrp-restore
+ Image countercheck-kqcdhbrp-app Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 662B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 236B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim
+#3 DONE 0.5s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 135B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 94B done
+#5 DONE 0.0s
+
+#6 [1/5] FROM docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+#6 resolve docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90 done
+#6 DONE 0.0s
+
+#7 [4/5] RUN pip install --no-cache-dir -r requirements.txt
+#7 CACHED
+
+#8 [2/5] WORKDIR /app
+#8 CACHED
+
+#9 [3/5] COPY app/requirements.txt .
+#9 CACHED
+
+#10 [5/5] COPY app/app.py .
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:37d8017440e0b0e43208706aaf55da729d5f66f02969388dd85c403e11c269e4 done
+#11 exporting config sha256:2a0732f231705feedb6afb7ef7b29e9c1a5c543e3fa88eb272c418bf3dafc0ee done
+#11 exporting attestation manifest sha256:5a6c99430f583942dcf3ba46944b3a7f83e5423442e6db9695f910a9648dd2d0 done
+#11 exporting manifest list sha256:bc2c28e9563f74b79194cfb3a6ddaf45aa63ccac016f20d2452e225a5de70a6a done
+#11 naming to docker.io/library/countercheck-kqcdhbrp-app:latest done
+#11 unpacking to docker.io/library/countercheck-kqcdhbrp-app:latest done
+#11 DONE 0.0s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+ Image countercheck-kqcdhbrp-app Built 
+ Volume countercheck-kqcdhbrp_redis_data Creating 
+ Volume countercheck-kqcdhbrp_redis_data Creating 
+ Network countercheck-kqcdhbrp_default Creating 
+ Network countercheck-kqcdhbrp_default Creating 
+ Volume countercheck-kqcdhbrp_redis_data Created 
+ Volume countercheck-kqcdhbrp_redis_data Created 
+ Network countercheck-kqcdhbrp_default Created 
+ Network countercheck-kqcdhbrp_default Created 
+ Container countercheck-kqcdhbrp-redis-1 Creating 
+ Container countercheck-kqcdhbrp-redis-1 Created 
+ Container countercheck-kqcdhbrp-app-1 Creating 
+ Container countercheck-kqcdhbrp-app-1 Created 
+ Container countercheck-kqcdhbrp-redis-1 Starting 
+ Container countercheck-kqcdhbrp-redis-1 Started 
+ Container countercheck-kqcdhbrp-redis-1 Waiting 
+ Container countercheck-kqcdhbrp-redis-1 Healthy 
+ Container countercheck-kqcdhbrp-app-1 Starting 
+ Container countercheck-kqcdhbrp-app-1 Started 
+ Container countercheck-kqcdhbrp-app-1 Waiting 
+ Container countercheck-kqcdhbrp-redis-1 Waiting 
+ Container countercheck-kqcdhbrp-redis-1 Healthy 
+ Container countercheck-kqcdhbrp-app-1 Healthy 
+URL: http://127.0.0.1:55006
+
+STAGE: process restrictions
+UID = 10001 ; readonly = True ; memory = 268435456 ; NanoCpus = 1000000000
+
+STAGE: initial count and increments
+GET / -> HTTP 200
+count = 0
+POST /increment -> HTTP 200
+count = 1
+POST /increment -> HTTP 200
+count = 2
+POST /increment -> HTTP 200
+count = 3
+
+STAGE: recreate app only
+ Container countercheck-kqcdhbrp-app-1 Recreate 
+ Container countercheck-kqcdhbrp-app-1 Recreated 
+ Container countercheck-kqcdhbrp-app-1 Starting 
+ Container countercheck-kqcdhbrp-app-1 Started 
+ Container countercheck-kqcdhbrp-app-1 Waiting 
+ Container countercheck-kqcdhbrp-app-1 Healthy 
+URL: http://127.0.0.1:55007
+GET / -> HTTP 200
+count = 3
+
+STAGE: compose down and up without deleting data
+ Container countercheck-kqcdhbrp-app-1 Stopping 
+ Container countercheck-kqcdhbrp-app-1 Stopped 
+ Container countercheck-kqcdhbrp-app-1 Removing 
+ Container countercheck-kqcdhbrp-app-1 Removed 
+ Container countercheck-kqcdhbrp-redis-1 Stopping 
+ Container countercheck-kqcdhbrp-redis-1 Stopped 
+ Container countercheck-kqcdhbrp-redis-1 Removing 
+ Container countercheck-kqcdhbrp-redis-1 Removed 
+ Network countercheck-kqcdhbrp_default Removing 
+ Network countercheck-kqcdhbrp_default Removed 
+ Network countercheck-kqcdhbrp_default Creating 
+ Network countercheck-kqcdhbrp_default Creating 
+ Network countercheck-kqcdhbrp_default Created 
+ Network countercheck-kqcdhbrp_default Created 
+ Container countercheck-kqcdhbrp-redis-1 Creating 
+ Container countercheck-kqcdhbrp-redis-1 Created 
+ Container countercheck-kqcdhbrp-app-1 Creating 
+ Container countercheck-kqcdhbrp-app-1 Created 
+ Container countercheck-kqcdhbrp-redis-1 Starting 
+ Container countercheck-kqcdhbrp-redis-1 Started 
+ Container countercheck-kqcdhbrp-redis-1 Waiting 
+ Container countercheck-kqcdhbrp-redis-1 Healthy 
+ Container countercheck-kqcdhbrp-app-1 Starting 
+ Container countercheck-kqcdhbrp-app-1 Started 
+ Container countercheck-kqcdhbrp-app-1 Waiting 
+ Container countercheck-kqcdhbrp-redis-1 Waiting 
+ Container countercheck-kqcdhbrp-redis-1 Healthy 
+ Container countercheck-kqcdhbrp-app-1 Healthy 
+URL: http://127.0.0.1:55008
+GET / -> HTTP 200
+count = 3
+
+STAGE: Redis outage
+ Container countercheck-kqcdhbrp-redis-1 Stopping 
+ Container countercheck-kqcdhbrp-redis-1 Stopped 
+GET /healthz -> HTTP 200
+GET /readyz -> HTTP 503
+POST /increment -> HTTP 503
+
+STAGE: Redis recovery without app restart
+ Container countercheck-kqcdhbrp-redis-1 Starting 
+ Container countercheck-kqcdhbrp-redis-1 Started 
+ Container countercheck-kqcdhbrp-redis-1 Waiting 
+ Container countercheck-kqcdhbrp-redis-1 Healthy 
+Application ready
+GET / -> HTTP 200
+count = 3
+POST /increment -> HTTP 200
+count = 4
+App ID, StartedAt and RestartCount unchanged
+
+STAGE: consistent external backup
+ Container countercheck-kqcdhbrp-app-1 Stopping 
+ Container countercheck-kqcdhbrp-app-1 Stopped 
+ Container countercheck-kqcdhbrp-redis-1 Stopping 
+ Container countercheck-kqcdhbrp-redis-1 Stopped 
+BACKUP: /Users/artemstary-boh/.codex/.chatgpt-projects/g-p-6a91d89c90ac81918d4cd0d85a00bf5b/hw_3_solution/backups/countercheck-kqcdhbrp.tar
+
+STAGE: delete original project including volumes
+ Container countercheck-kqcdhbrp-app-1 Stopping 
+ Container countercheck-kqcdhbrp-app-1 Stopped 
+ Container countercheck-kqcdhbrp-app-1 Removing 
+ Container countercheck-kqcdhbrp-app-1 Removed 
+ Container countercheck-kqcdhbrp-redis-1 Stopping 
+ Container countercheck-kqcdhbrp-redis-1 Stopped 
+ Container countercheck-kqcdhbrp-redis-1 Removing 
+ Container countercheck-kqcdhbrp-redis-1 Removed 
+ Network countercheck-kqcdhbrp_default Removing 
+ Volume countercheck-kqcdhbrp_redis_data Removing 
+ Volume countercheck-kqcdhbrp_redis_data Removed 
+ Image countercheck-kqcdhbrp-app:latest Removing 
+ Image countercheck-kqcdhbrp-app:latest Removed 
+ Network countercheck-kqcdhbrp_default Removed 
+Original containers and volumes removed
+
+STAGE: restore backup into another empty project
+ Volume countercheck-kqcdhbrp-restore_redis_data Creating 
+ Volume countercheck-kqcdhbrp-restore_redis_data Creating 
+ Network countercheck-kqcdhbrp-restore_default Creating 
+ Network countercheck-kqcdhbrp-restore_default Creating 
+ Volume countercheck-kqcdhbrp-restore_redis_data Created 
+ Volume countercheck-kqcdhbrp-restore_redis_data Created 
+ Network countercheck-kqcdhbrp-restore_default Created 
+ Network countercheck-kqcdhbrp-restore_default Created 
+ Container countercheck-kqcdhbrp-restore-redis-1 Creating 
+ Container countercheck-kqcdhbrp-restore-redis-1 Created 
+ Image countercheck-kqcdhbrp-restore-app Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 678B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 236B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim
+#3 DONE 0.7s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 135B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 94B done
+#5 DONE 0.0s
+
+#6 [1/5] FROM docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+#6 resolve docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90 done
+#6 DONE 0.0s
+
+#7 [2/5] WORKDIR /app
+#7 CACHED
+
+#8 [3/5] COPY app/requirements.txt .
+#8 CACHED
+
+#9 [4/5] RUN pip install --no-cache-dir -r requirements.txt
+#9 CACHED
+
+#10 [5/5] COPY app/app.py .
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:07df5126c4f854bfb2be0e3e8f699125258a1a36ddcd13cbcfe4a815122027e4 done
+#11 exporting config sha256:088bd5249484afdf9f9ffd316dcb2916193c9e89979177cc565b1aec81b28ee4 done
+#11 exporting attestation manifest sha256:3e3458610b713084ecc512f6cecf316a73b6ef236da239407e7d80d4a55ac1de done
+#11 exporting manifest list sha256:8583a020757d63293823ff7b6ed0b44c70d2568232b893a0c6ad9f26a543020e done
+#11 naming to docker.io/library/countercheck-kqcdhbrp-restore-app:latest done
+#11 unpacking to docker.io/library/countercheck-kqcdhbrp-restore-app:latest done
+#11 DONE 0.0s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+ Image countercheck-kqcdhbrp-restore-app Built 
+ Container countercheck-kqcdhbrp-restore-app-1 Creating 
+ Container countercheck-kqcdhbrp-restore-app-1 Created 
+ Container countercheck-kqcdhbrp-restore-redis-1 Starting 
+ Container countercheck-kqcdhbrp-restore-redis-1 Started 
+ Container countercheck-kqcdhbrp-restore-redis-1 Waiting 
+ Container countercheck-kqcdhbrp-restore-redis-1 Healthy 
+ Container countercheck-kqcdhbrp-restore-app-1 Starting 
+ Container countercheck-kqcdhbrp-restore-app-1 Started 
+ Container countercheck-kqcdhbrp-restore-app-1 Waiting 
+ Container countercheck-kqcdhbrp-restore-redis-1 Waiting 
+ Container countercheck-kqcdhbrp-restore-redis-1 Healthy 
+ Container countercheck-kqcdhbrp-restore-app-1 Healthy 
+URL: http://127.0.0.1:55009
+GET / -> HTTP 200
+count = 4
+POST /increment -> HTTP 200
+count = 5
+Backup restored: count 4, next increment 5
+
+STAGE: cleanup
+ Container countercheck-kqcdhbrp-restore-app-1 Stopping 
+ Container countercheck-kqcdhbrp-restore-app-1 Stopped 
+ Container countercheck-kqcdhbrp-restore-app-1 Removing 
+ Container countercheck-kqcdhbrp-restore-app-1 Removed 
+ Container countercheck-kqcdhbrp-restore-redis-1 Stopping 
+ Container countercheck-kqcdhbrp-restore-redis-1 Stopped 
+ Container countercheck-kqcdhbrp-restore-redis-1 Removing 
+ Container countercheck-kqcdhbrp-restore-redis-1 Removed 
+ Network countercheck-kqcdhbrp-restore_default Removing 
+ Volume countercheck-kqcdhbrp-restore_redis_data Removing 
+ Volume countercheck-kqcdhbrp-restore_redis_data Removed 
+ Image countercheck-kqcdhbrp-restore-app:latest Removing 
+ Image countercheck-kqcdhbrp-restore-app:latest Removed 
+ Network countercheck-kqcdhbrp-restore_default Removed 
+SUCCESS: recovery verified; test resources removed

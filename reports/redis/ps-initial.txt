@@ -1,0 +1,3 @@
+NAME                    IMAGE               COMMAND                  SERVICE   CREATED          STATUS                    PORTS
+hw_3_solution-app-1     hw_3_solution-app   "python app.py"          app       14 seconds ago   Up 5 seconds (healthy)    127.0.0.1:8081->8000/tcp
+hw_3_solution-redis-1   redis:7.4-alpine    "docker-entrypoint.s…"   redis     14 seconds ago   Up 10 seconds (healthy)   6379/tcp

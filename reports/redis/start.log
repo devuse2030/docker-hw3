@@ -1,0 +1,310 @@
+ Image redis:7.4-alpine Pulling 
+ fea5b91588ca Pulling fs layer 0B
+ 16cda2556898 Pulling fs layer 0B
+ fb602ba0b128 Pulling fs layer 0B
+ 8fe75981dbac Pulling fs layer 0B
+ 54abef31ddd9 Pulling fs layer 0B
+ e8978eba2bb2 Pulling fs layer 0B
+ 4f4fb700ef54 Pulling fs layer 0B
+ 16cda2556898 Download complete 0B
+ fb602ba0b128 Downloading 949B
+ 8fe75981dbac Download complete 0B
+ fb602ba0b128 Download complete 0B
+ e8978eba2bb2 Download complete 0B
+ 4f4fb700ef54 Download complete 0B
+ fea5b91588ca Downloading 1.049MB
+ 4704a97c8705 Download complete 0B
+ fea5b91588ca Downloading 1.049MB
+ fea5b91588ca Downloading 1.049MB
+ fea5b91588ca Downloading 1.049MB
+ fea5b91588ca Downloading 1.049MB
+ fea5b91588ca Downloading 2.097MB
+ fea5b91588ca Downloading 2.097MB
+ fea5b91588ca Downloading 2.097MB
+ fea5b91588ca Downloading 2.097MB
+ fea5b91588ca Downloading 2.097MB
+ fea5b91588ca Downloading 2.097MB
+ fea5b91588ca Downloading 2.097MB
+ fea5b91588ca Downloading 2.097MB
+ fea5b91588ca Downloading 2.097MB
+ fea5b91588ca Downloading 2.097MB
+ fea5b91588ca Downloading 2.097MB
+ fea5b91588ca Downloading 3.146MB
+ fea5b91588ca Downloading 3.146MB
+ fea5b91588ca Downloading 3.146MB
+ fea5b91588ca Downloading 3.146MB
+ fea5b91588ca Downloading 3.146MB
+ fea5b91588ca Downloading 3.146MB
+ fea5b91588ca Downloading 3.146MB
+ fea5b91588ca Downloading 3.146MB
+ fea5b91588ca Downloading 3.146MB
+ fea5b91588ca Downloading 3.146MB
+ fea5b91588ca Downloading 3.146MB
+ fea5b91588ca Downloading 3.146MB
+ fea5b91588ca Download complete 0B
+ a99ab7f50347 Download complete 0B
+ fea5b91588ca Extracting 1B
+ 8fe75981dbac Pull complete 0B
+ fb602ba0b128 Pull complete 0B
+ fea5b91588ca Pull complete 0B
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 1.049MB
+ 54abef31ddd9 Downloading 2.097MB
+ 54abef31ddd9 Downloading 2.097MB
+ 54abef31ddd9 Downloading 2.097MB
+ 54abef31ddd9 Downloading 2.097MB
+ 54abef31ddd9 Downloading 2.097MB
+ 54abef31ddd9 Downloading 2.097MB
+ 54abef31ddd9 Downloading 2.097MB
+ 54abef31ddd9 Downloading 2.097MB
+ 54abef31ddd9 Downloading 2.097MB
+ 54abef31ddd9 Downloading 2.097MB
+ 54abef31ddd9 Downloading 2.097MB
+ 54abef31ddd9 Downloading 2.097MB
+ 54abef31ddd9 Downloading 3.146MB
+ 54abef31ddd9 Downloading 3.146MB
+ 54abef31ddd9 Downloading 3.146MB
+ 54abef31ddd9 Downloading 3.146MB
+ 54abef31ddd9 Downloading 3.146MB
+ 54abef31ddd9 Downloading 3.146MB
+ 54abef31ddd9 Downloading 3.146MB
+ 54abef31ddd9 Downloading 3.146MB
+ 54abef31ddd9 Downloading 3.146MB
+ 54abef31ddd9 Downloading 3.146MB
+ 54abef31ddd9 Downloading 3.146MB
+ 54abef31ddd9 Downloading 3.146MB
+ 54abef31ddd9 Downloading 4.194MB
+ 54abef31ddd9 Downloading 4.194MB
+ 54abef31ddd9 Downloading 4.194MB
+ 54abef31ddd9 Downloading 4.194MB
+ 54abef31ddd9 Downloading 4.194MB
+ 54abef31ddd9 Downloading 4.194MB
+ 54abef31ddd9 Downloading 4.194MB
+ 54abef31ddd9 Downloading 4.194MB
+ 54abef31ddd9 Downloading 4.194MB
+ 54abef31ddd9 Downloading 4.194MB
+ 54abef31ddd9 Downloading 4.194MB
+ 54abef31ddd9 Downloading 4.194MB
+ 54abef31ddd9 Downloading 5.243MB
+ 54abef31ddd9 Downloading 5.243MB
+ 54abef31ddd9 Downloading 5.243MB
+ 54abef31ddd9 Downloading 5.243MB
+ 54abef31ddd9 Downloading 5.243MB
+ 54abef31ddd9 Downloading 5.243MB
+ 54abef31ddd9 Downloading 5.243MB
+ 54abef31ddd9 Downloading 5.243MB
+ 54abef31ddd9 Downloading 6.291MB
+ 54abef31ddd9 Downloading 6.291MB
+ 54abef31ddd9 Downloading 6.291MB
+ 54abef31ddd9 Downloading 6.291MB
+ 54abef31ddd9 Downloading 6.291MB
+ 54abef31ddd9 Downloading 6.291MB
+ 54abef31ddd9 Downloading 6.291MB
+ 54abef31ddd9 Downloading 6.291MB
+ 54abef31ddd9 Downloading 6.291MB
+ 54abef31ddd9 Downloading 7.34MB
+ 54abef31ddd9 Downloading 7.34MB
+ 54abef31ddd9 Downloading 7.34MB
+ 54abef31ddd9 Downloading 7.34MB
+ 54abef31ddd9 Downloading 7.34MB
+ 54abef31ddd9 Downloading 7.34MB
+ 54abef31ddd9 Downloading 7.34MB
+ 54abef31ddd9 Downloading 7.34MB
+ 54abef31ddd9 Downloading 7.34MB
+ 54abef31ddd9 Downloading 8.389MB
+ 54abef31ddd9 Downloading 8.389MB
+ 54abef31ddd9 Downloading 8.389MB
+ 54abef31ddd9 Downloading 8.389MB
+ 54abef31ddd9 Downloading 8.389MB
+ 54abef31ddd9 Downloading 8.389MB
+ 54abef31ddd9 Downloading 8.389MB
+ 54abef31ddd9 Downloading 8.389MB
+ 54abef31ddd9 Downloading 8.389MB
+ 54abef31ddd9 Downloading 8.389MB
+ 54abef31ddd9 Downloading 8.389MB
+ 54abef31ddd9 Downloading 8.389MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 9.437MB
+ 54abef31ddd9 Downloading 10.49MB
+ 54abef31ddd9 Downloading 10.49MB
+ 54abef31ddd9 Downloading 10.49MB
+ 54abef31ddd9 Downloading 10.49MB
+ 54abef31ddd9 Downloading 10.49MB
+ 54abef31ddd9 Downloading 10.49MB
+ 54abef31ddd9 Downloading 10.49MB
+ 54abef31ddd9 Downloading 10.49MB
+ 54abef31ddd9 Downloading 10.49MB
+ 54abef31ddd9 Downloading 11.53MB
+ 54abef31ddd9 Downloading 11.53MB
+ 54abef31ddd9 Downloading 11.53MB
+ 54abef31ddd9 Downloading 11.53MB
+ 54abef31ddd9 Downloading 11.53MB
+ 54abef31ddd9 Downloading 11.53MB
+ 54abef31ddd9 Downloading 11.53MB
+ 54abef31ddd9 Downloading 11.53MB
+ 54abef31ddd9 Downloading 11.53MB
+ 54abef31ddd9 Downloading 11.53MB
+ 54abef31ddd9 Download complete 0B
+ 54abef31ddd9 Extracting 1B
+ 16cda2556898 Pull complete 0B
+ e8978eba2bb2 Pull complete 0B
+ 4f4fb700ef54 Pull complete 0B
+ 54abef31ddd9 Pull complete 0B
+ Image redis:7.4-alpine Pulled 
+ Image hw_3_solution-app Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 646B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 236B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim
+#3 DONE 1.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 126B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 94B done
+#5 DONE 0.0s
+
+#6 [1/5] FROM docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+#6 resolve docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90 done
+#6 DONE 0.0s
+
+#7 [4/5] RUN pip install --no-cache-dir -r requirements.txt
+#7 CACHED
+
+#8 [2/5] WORKDIR /app
+#8 CACHED
+
+#9 [3/5] COPY app/requirements.txt .
+#9 CACHED
+
+#10 [5/5] COPY app/app.py .
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 exporting manifest sha256:be95d3a74e65069ef21b05452e85d65cb849d48a4d9a93bb38dbcc835ccd4d1e done
+#11 exporting config sha256:4ff1258ecc115532db345d314469e39fe838ad7efd03ae3d5af6caa8150d5276 done
+#11 exporting attestation manifest sha256:53a64544abc8af70f10a2c2bea06316309ca9a191b620a61efcee3d077456eb0 done
+#11 exporting manifest list sha256:3d8a578f446f75ef292232790c1ee4555172cc2580d3f8a5921a7b633030bcfd done
+#11 naming to docker.io/library/hw_3_solution-app:latest done
+#11 unpacking to docker.io/library/hw_3_solution-app:latest done
+#11 DONE 0.0s
+
+#12 resolving provenance for metadata file
+#12 DONE 0.0s
+ Image hw_3_solution-app Built 
+ Volume hw_3_solution_redis_data Creating 
+ Volume hw_3_solution_redis_data Creating 
+ Volume hw_3_solution_redis_data Created 
+ Volume hw_3_solution_redis_data Created 
+ Container hw_3_solution-redis-1 Creating 
+ Container hw_3_solution-redis-1 Created 
+ Container hw_3_solution-app-1 Recreate 
+ Container hw_3_solution-app-1 Recreated 
+ Container hw_3_solution-redis-1 Starting 
+ Container hw_3_solution-redis-1 Started 
+ Container hw_3_solution-redis-1 Waiting 
+ Container hw_3_solution-redis-1 Healthy 
+ Container hw_3_solution-app-1 Starting 
+ Container hw_3_solution-app-1 Started 
+ Container hw_3_solution-redis-1 Waiting 
+ Container hw_3_solution-app-1 Waiting 
+ Container hw_3_solution-redis-1 Healthy 
+ Container hw_3_solution-app-1 Healthy 

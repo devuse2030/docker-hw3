@@ -1,0 +1,19 @@
+app-1  | 2026-11-22 17:42:02,635 listening port=8000 storage=redis
+app-1  | 2026-11-22 17:42:07,549 http 127.0.0.1 "GET /readyz HTTP/1.1" 200 -
+app-1  | 2026-11-22 17:42:12,602 http 127.0.0.1 "GET /readyz HTTP/1.1" 200 -
+app-1  | 2026-11-22 17:42:17,657 http 127.0.0.1 "GET /readyz HTTP/1.1" 200 -
+app-1  | 2026-11-22 17:42:22,717 http 127.0.0.1 "GET /readyz HTTP/1.1" 200 -
+app-1  | 2026-11-22 17:42:22,899 http 172.18.0.1 "GET / HTTP/1.1" 200 -
+app-1  | 2026-11-22 17:42:22,909 http 172.18.0.1 "POST /increment HTTP/1.1" 200 -
+app-1  | 2026-11-22 17:42:22,919 http 172.18.0.1 "POST /increment HTTP/1.1" 200 -
+app-1  | 2026-11-22 17:42:22,929 http 172.18.0.1 "POST /increment HTTP/1.1" 200 -
+app-1  | 2026-11-22 17:42:22,938 http 172.18.0.1 "GET / HTTP/1.1" 200 -
+redis-1  | 1:C 22 Nov 2026 17:41:57.471 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1  | 1:C 22 Nov 2026 17:41:57.471 * Redis version=7.4.12, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1  | 1:C 22 Nov 2026 17:41:57.471 * Configuration loaded
+redis-1  | 1:M 22 Nov 2026 17:41:57.471 * monotonic clock: POSIX clock_gettime
+redis-1  | 1:M 22 Nov 2026 17:41:57.472 * Running mode=standalone, port=6379.
+redis-1  | 1:M 22 Nov 2026 17:41:57.472 * Server initialized
+redis-1  | 1:M 22 Nov 2026 17:41:57.473 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+redis-1  | 1:M 22 Nov 2026 17:41:57.474 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+redis-1  | 1:M 22 Nov 2026 17:41:57.474 * Ready to accept connections tcp
